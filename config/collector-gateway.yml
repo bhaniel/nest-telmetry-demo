@@ -31,7 +31,6 @@ exporters:
   otlp/aspecto:
     endpoint: otelcol.aspecto.io:4317
     headers:
-      Authorization: d346f1df-7e19-4635-bf90-bf6082980cc0
   otlp/honeycomb:
     endpoint: api.honeycomb.io:443
     headers:
