@@ -28,15 +28,6 @@ exporters:
       label1: value1
   logging:
     loglevel: info
-  otlp/aspecto:
-    endpoint: otelcol.aspecto.io:4317
-    headers:
-  otlp/honeycomb:
-    endpoint: api.honeycomb.io:443
-    headers:
-      x-honeycomb-team: 0FfNYwQPNTGW6meRFuKGtI
-      X-Honeycomb-Team: 1
-      X-Honeycomb-Writekey: 1
   otlp/jaeger:
     endpoint: "http://jaeger:4317"
     tls:
@@ -65,7 +56,6 @@ service:
         - resource
       exporters:
         - logging
-        - otlp/aspecto
         - otlp/jaeger
         - elasticsearch/trace
     metrics:
