@@ -1,12 +1,13 @@
 import '@haniel/opentel';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { Logger } from './Logger/logger.service';
+import { LoggerService } from './Logger/logger.service';
 async function bootstrap() {
     const app = await NestFactory.create(AppModule, {
         bufferLogs: true,
     });
-    app.useLogger(new Logger());
+    app.useLogger(new LoggerService());
     await app.listen(3000);
 }
+// ssrssss
 bootstrap();
